@@ -1,0 +1,47 @@
+class Program
+{
+    static void Main(String[] args)
+    {
+        Car car = new Car();
+        Boat boat = new Boat();
+        Bycycle bycycle = new Bycycle();
+        Console.WriteLine(car.speed);
+        Console.WriteLine(car.maxSpeed);
+        Console.WriteLine(car.wheels);
+        car.go();
+        Console.WriteLine(boat.speed);
+        Console.WriteLine(boat.maxSpeed);
+        Console.WriteLine(boat.wheels);
+        boat.go();
+        Console.WriteLine(bycycle.speed);
+        Console.WriteLine(bycycle.maxSpeed);
+        Console.WriteLine(bycycle.wheels);
+        bycycle.go();
+        Console.ReadKey();
+
+    }
+     abstract class Vehicle
+    {
+        public int speed = 0;
+        public void go()
+        {
+            Console.WriteLine("this vehicle is moving !");
+        }
+    }
+    class Car: Vehicle
+    {
+        public int wheels = 4;
+         public int maxSpeed=300;
+    }
+    class Bycycle : Vehicle
+    {
+        public int wheels = 2;
+        public int maxSpeed = 50;
+
+    }
+    class Boat : Vehicle
+    {
+        public int wheels = 0;
+        public int maxSpeed = 100;
+    }
+}
