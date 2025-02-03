@@ -1,0 +1,35 @@
+
+class Program
+{
+    static void Main(String[] args)
+    {
+        List<String> food = new List<String>();
+ 
+        food.Add("Pizza");
+        food.Add("hotDog");
+        food.Add("Humberge");
+        food.Add("fries");
+
+        //food.Remove("fries");
+        //food.Insert(0,"Shushi");
+        //Console.WriteLine(food.Count());
+        // Console.WriteLine(food.IndexOf("Pizza"));
+        //Console.WriteLine(food.LastIndexOf("fries"));
+        //Console.WriteLine( food.Contains("Pizza"));
+        //food.Sort();
+        //food.Reverse();
+        //food.Clear();
+        String[] foodArray = food.ToArray();
+
+        foreach (String items in foodArray)
+        {
+            Console.WriteLine(items);
+        }
+       
+         
+        Console.ReadKey();
+    }
+     
+}
+
+ 
