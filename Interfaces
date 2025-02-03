@@ -1,0 +1,52 @@
+class Program
+{
+    static void Main(String[] args)
+    {
+        //Rabbit rabbit = new Rabbit();
+        //Hawk hawk = new Hawk(); 
+        // rabbit.Feel();
+        // hawk.hunt();
+        Fish fish = new Fish();
+        fish.Feel();
+        fish.hunt();
+      
+       
+         
+        Console.ReadLine();
+    }
+    interface Iprey
+    {
+         void Feel();
+    }
+    interface Ipredator
+    {
+        void hunt();
+    }
+    class Rabbit: Iprey
+    {
+        public void Feel()
+        {
+            Console.WriteLine("The rabbit runs away !");
+        }
+
+    }
+    class Hawk : Ipredator
+    {
+        public void hunt()
+        {
+            Console.WriteLine(" the hawk is searching for food ");
+        }
+    }
+    class Fish : Iprey ,Ipredator
+    {
+        public void Feel()
+        {
+            Console.WriteLine(" the fish swims away ");
+        }
+        public void hunt()
+        {
+            Console.WriteLine( " the fish is searching for smaller fish ");
+        }
+    }
+
+}
