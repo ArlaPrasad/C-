@@ -1,0 +1,35 @@
+lass Program
+{
+    static void Main(String[] args)
+    {
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        dog.speak();
+        cat.speak();
+        Console.ReadKey();
+
+    }
+       class Animal
+    {
+     
+        public virtual void speak()
+        {
+            Console.WriteLine("the animal goes * broo *!");
+        }
+    }
+    class  Cat: Animal
+    {
+        public override void speak()
+        {
+            Console.WriteLine("The dog goes  *woof*");
+        }
+    }
+    class Dog : Animal
+    {
+        public override void speak()
+        {
+            Console.WriteLine("The dog goes  *meoy*");
+        }
+    }
+    
+}
